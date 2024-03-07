@@ -1,9 +1,3 @@
-"use strict";
-/**
- * traverse in reverse method
- * deleting and searching objects and arrays
- *
- */
 class NodeItem {
     constructor(value) {
         this.value = value;
@@ -65,3 +59,4 @@ console.log(JSON.stringify(list));
 const res = list.delete(32432);
 console.log('the result is: ', res);
 console.log(JSON.stringify(list));
+export {};
