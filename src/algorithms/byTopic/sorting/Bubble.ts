@@ -1,3 +1,10 @@
+function swap(arr: number[], i: number, j: number) {
+  const temp = arr[i];
+  arr[i] = arr[j];
+  arr[j] = temp;
+}
+
+
 function bubbleSorting(arr: number[]): number[] {
   let isSorted = false;
   let lastUnsorted = arr.length - 1;
@@ -12,12 +19,6 @@ function bubbleSorting(arr: number[]): number[] {
     lastUnsorted--;
   }
   return arr;
-}
-
-function swap(arr: number[], i: number, j: number) {
-  const temp = arr[i];
-  arr[i] = arr[j];
-  arr[j] = temp;
 }
 
 const res = bubbleSorting([3, 99, 1, 12, 43, 56, 20])

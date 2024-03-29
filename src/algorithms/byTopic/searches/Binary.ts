@@ -18,6 +18,3 @@ export default function binarySearch(sortedArray: number[], searchValue: number)
   return -1;
 }
 
-const arr = [43, 324, 32, 234, 453, 45, 7, 34, 9, 10, 11, 1, 2222];
-const sortedArr = arr.sort((a, b) => a - b);
-const res = binarySearch(sortedArr, 2);

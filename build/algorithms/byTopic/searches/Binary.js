@@ -4,8 +4,6 @@ export default function binarySearch(sortedArray, searchValue) {
     // let middleElement = startIndex + Math.floor((endIndex - startIndex) / 2);
     while (endIndex >= startIndex) {
         const middleIndex = startIndex + Math.floor((endIndex - startIndex) / 2);
-        console.log("start index", startIndex);
-        console.log("end index", endIndex);
         if (sortedArray[middleIndex] === searchValue) {
             return middleIndex;
         }
@@ -18,8 +16,3 @@ export default function binarySearch(sortedArray, searchValue) {
     }
     return -1;
 }
-const arr = [43, 324, 32, 234, 453, 45, 7, 34, 9, 10, 11, 1, 2222];
-const sortedArr = arr.sort((a, b) => a - b);
-console.log('sorted', sortedArr);
-const res = binarySearch(sortedArr, 199999);
-console.log(res);
