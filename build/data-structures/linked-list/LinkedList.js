@@ -60,11 +60,4 @@ class LinkedList {
         return false;
     }
 }
-const list = new LinkedList;
-list.add(1);
-list.add(2);
-list.add(12);
-console.log(JSON.stringify(list));
-const res = list.contain(2432);
-console.log('the result is: ', res);
 export {};
