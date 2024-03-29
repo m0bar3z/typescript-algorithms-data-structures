@@ -1,10 +1,7 @@
 interface ILinkedList<T> {
   add(data: T): NodeItem<T>;
-  // prepend(data: T): NodeItem<T>;
   delete(node: T): boolean;
-  // search(head: NodeItem<T>, value: T): boolean;
-  // traverse(head: NodeItem<T>): Array<NodeItem<T>>;
-  // traverseInReverse
+  contain(node: T): boolean;
 }
 
 class NodeItem<T> {
@@ -58,17 +55,24 @@ class LinkedList<T> implements ILinkedList<T> {
 
     return false;
   }
+
+  contain(value: T) {
+    let current = this.head;
+    while (current) {
+      if (current.value === value) return true;
+      else current = current.next;
+    }
+    return false;
+  }
 }
 
 
 const list = new LinkedList<number>;
 list.add(1);
 list.add(2);
-const node = list.add(3);
 list.add(12);
 console.log(JSON.stringify(list))
 
-const res = list.delete(32432);
+const res = list.contain(2432);
 
 console.log('the result is: ', res);
-console.log(JSON.stringify(list));

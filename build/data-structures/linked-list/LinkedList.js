@@ -49,14 +49,22 @@ class LinkedList {
         }
         return false;
     }
+    contain(value) {
+        let current = this.head;
+        while (current) {
+            if (current.value === value)
+                return true;
+            else
+                current = current.next;
+        }
+        return false;
+    }
 }
 const list = new LinkedList;
 list.add(1);
 list.add(2);
-const node = list.add(3);
 list.add(12);
 console.log(JSON.stringify(list));
-const res = list.delete(32432);
+const res = list.contain(2432);
 console.log('the result is: ', res);
-console.log(JSON.stringify(list));
 export {};
